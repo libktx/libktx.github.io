@@ -206,7 +206,7 @@ a:hover {
     font-weight: normal;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 0rem) {
     .logo {
         width: 15rem;
     }
@@ -273,3 +273,4 @@ a:hover {
         display: block;
     }
 }
+
