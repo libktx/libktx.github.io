@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<!-- WARNING: Made by a backend developer. Read at your own risk. -->
+<head>
+    <meta charset="UTF-8"> 
+    <title>KTX: Kotlin support for LibGDX applications</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/ktx-logo.ico">
+</head>
+<body data-spy="scroll" data-target="#header-navbar-collapse" data-offset="100">
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand scroll-top" href="#">
+                <img class="logo-tiny" src="img/ktx-logo.svg">
+            </a>
+            <button type="button" class="navbar-toggle collapsed navbar-left" data-toggle="collapse"
+                    data-target="#header-navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="header-navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#modules-section">Modules</a></li>
+                <li><a href="#dependencies-section">Dependencies</a></li>
+                <li><a href="#showcase-section">Showcase</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<img class="logo" src="img/ktx-logo.svg">
+
+<section id="about-section" class="container-fluid">
+    <div class="about-container col-md-8 col-md-offset-2 col-sm-12">
+        <h3 class="headline">
+            <a class="kotlin-link" href="https://kotlinlang.org/">Kotlin</a> meets
+            <a class="libgdx-link" href="https://libgdx.badlogicgames.com/">LibGDX</a>
+        </h3>
+        <div class="row">
+            <div class="about-paragraph col-sm-6 col-xs-12">
+                <div class="image-border">
+                    <img alt="" class="about-icon" src="img/about/kotlin-logo.svg">
+                </div>
+                <div class="about-text">
+                    <h4>Written in <a href="https://kotlinlang.org/">Kotlin</a></h4>
+                    <p>
+                        Utilizes language features like <a href="https://github.com/czyzby/ktx/tree/master/async">coroutines</a>,
+                        <a href="https://github.com/czyzby/ktx/tree/master/scene2d">type-safe builders</a> and
+                        <a href="https://github.com/czyzby/ktx/tree/master/math">operator overloading</a> to ease game
+                        development.
+                    </p>
+                </div>
+            </div>
+            <div class="about-paragraph col-sm-6 col-xs-12">
+                <div class="image-border">
+                    <img alt="" class="about-icon" src="img/about/libgdx-logo.svg">
+                </div>
+                <div class="about-text">
+                    <h4>Based on <a href="https://libgdx.badlogicgames.com/">LibGDX</a></h4>
+                    <p>
+                        Extends a robust multi-platform game framework with highly modular and minimally opinionated
+                        <a href="https://kotlinlang.org/">Kotlin</a> utilities.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="about-paragraph col-sm-6 col-xs-12">
+                <div class="image-border">
+                    <img alt="" class="about-icon" src="img/about/multi-platform-icon.svg">
+                </div>
+                <div class="about-text">
+                    <h4>Multi-platform</h4>
+                    <p>
+                        <strong>KTX</strong> can be used to create <strong>desktop</strong>, <strong>Android</strong>
+                        and <strong>iOS</strong> applications.
+                        Supports <a href="https://github.com/jtransc/gdx-backend-jtransc">other</a>
+                        <a href="https://github.com/xpenatan/gdx-dragome-backend">platforms</a> through third-party
+                        libraries.
+                    </p>
+                </div>
+            </div>
+            <div class="about-paragraph col-sm-6 col-xs-12">
+                <div class="image-border">
+                    <img alt="" class="about-icon" src="img/about/shield-icon.svg">
+                </div>
+                <div class="about-text">
+                    <h4>Safe</h4>
+                    <p>
+                        Our main goals are usability and stability. Comprehensive test suites are written for
+                        <em>every</em> <strong>KTX</strong> feature.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="about-paragraph col-sm-6 col-xs-12">
+                <div class="image-border">
+                    <img alt="" class="about-icon" src="img/about/documentation-icon.svg">
+                </div>
+                <div class="about-text">
+                    <h4>Well documented</h4>
+                    <p>
+                        Each module is documented by a guide with a list of its features and extensions, as well as
+                        API usage examples.
+                    </p>
+                </div>
+            </div>
+            <div class="about-paragraph col-sm-6 col-xs-12">
+                <div class="image-border">
+                    <img alt="" class="about-icon" src="img/about/github-logo.svg">
+                </div>
+                <div class="about-text">
+                    <h4>Open</h4>
+                    <p>
+                        <strong>KTX</strong> sources are available on <a href="https://github.com/czyzby/ktx">GitHub</a>
+                        under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> license. We are open
+                        to contributions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="modules-section" class="container-fluid">
+    <div class="modules-container col-md-8 col-md-offset-2 col-sm-12">
+        <h3 class="headline">
+            <strong>KTX</strong> modules
+        </h3>
+        <div class="row flex-row">
+            <div class="module-paragraph col-sm-4 col-xs-6">
+                <div class="image-border">
+                    <a class="module-link" data-module="ktx-actors" href="#dependencies-section">
+                        <img alt="" class="module-icon" src="img/modules/actors-icon.svg">
+                    </a>
+                </div>
+                <div class="module-text">
+                    <span class="module-title">
+                        <a href="https://github.com/czyzby/ktx/tree/master/actors">ktx-actors</a>
+                    </span>
+                    <span class="glyphicon icon-orange glyphicon-minus" aria-hidden="true"></span>
+                    Extensions of <a href="https://github.com/libgdx/libgdx/wiki/Scene2d.ui">Scene2D</a> widgets.
+                </div>
+            </div>
+            <div class="module-paragraph col-sm-4 col-xs-6">
+                <div class="image-border">
+                    <a class="module-link" data-module="ktx-app" href="#dependencies-section">
+                        <img alt="" class="module-icon" src="img/modules/app-icon.svg">
+                    </a>
+                </div>
+                <div class="module-text">
+                    <span class="module-title">
+                        <a href="https://github.com/czyzby/ktx/tree/master/app">ktx-app</a>
+                    </span>
+                    <span class="glyphicon icon-orange glyphicon-minus" aria-hidden="true"></span>
+                    Application <a href="https://github.com/libgdx/libgdx/wiki/The-life-cycle">lifecycle</a> management
+                    utilities.
+                </div>
+            </div>
+            <div class="module-paragraph col-sm-4 col-xs-6">
+                <div class="image-border">
+                    <a class="module-link" data-module="ktx-assets" href="#dependencies-section">
+                        <img alt="" class="module-icon" src="img/modules/assets-icon.svg">
+                    </a>
+                </div>
+                <div class="module-text">
+                        <span class="module-title">
+                            <a href="https://github.com/czyzby/ktx/tree/master/assets">ktx-assets</a>
+                        </span>
+                    <span class="glyphicon icon-orange glyphicon-minus" aria-hidden="true"></span>
+                    <a href="https://github.com/libgdx/libgdx/wiki/Managing-your-assets">Assets</a> handling
+                    extensions.
+                </div>
+            </div>
+            <div class="module-paragraph col-sm-4 col-xs-6">
+                <div class="image-border">
+                    <a class="module-link" data-module="ktx-async" href="#dependencies-section">
+                        <img alt="" class="module-icon" src="img/modules/async-icon.svg">
+                    </a>
+                </div>
+                <div class="module-text">
+                        <span class="module-title">
+                            <a href="https://github.com/czyzby/ktx/tree/master/async">ktx-async</a>
+                        </span>
+                    <span class="glyphicon icon-orange glyphicon-minus" aria-hidden="true"></span>
+                    <a href="https://kotlinlang.org/docs/reference/coroutines.html">Coroutines</a> context using
+                    LibGDX <a href="https://github.com/libgdx/libgdx/wiki/Threading">threading</a> model.
+                </div>
+            </div>
+            <div class="module-paragraph col-sm-4 col-xs-6">
+                <div class="image-border">
+                    <a class="module-link" data-module="ktx-collections" href="#dependencies-section">
+                        <img alt="" class="module-icon" src="img/modules/collections-icon.svg">
+                    </a>
+                </div>
+                <div class="module-text">
+                        <span class="module-title">
+                            <a href="https://github.com/czyzby/ktx/tree/master/collections">ktx-collections</a>
+                        </span>
+                    <span class="glyphicon icon-orange glyphicon-minus" aria-hidden="true"></span>
+                    Utilities for LibGDX memory efficient
+                    <a href="https://github.com/libgdx/libgdx/wiki/Collections">collections</a>.
+                </div>
+            </div>
+            <div class="module-paragraph col-sm-4 col-xs-6">
+                <div class="image-border">
+                    <a class="module-link" data-module="ktx-i18n" href="#dependencies-section">
+                        <img alt="" class="module-icon" src="img/modules/i18n-icon.svg">
+                    </a>
+                </div>
+                <div class="module-text">
+                        <span class="module-title">
+                            <a href="https://github.com/czyzby/ktx/tree/master/i18n">ktx-i18n</a>
+                        </span>
+                    <span class="glyphicon icon-orange glyphicon-minus" aria-hidden="true"></span>
+                    <a href="https://github.com/libgdx/libgdx/wiki/Internationalization-and-Localization">Internationalization</a>
+                    API improvements.
+                </div>
+            </div>
+            <div class="module-paragraph col-sm-4 col-xs-6">
+                <div class="image-border">
+                    <a class="module-link" data-module="ktx-inject" href="#dependencies-section">
+                        <img alt="" class="module-icon" src="img/modules/inject-icon.svg">
+                    </a>
+                </div>
+                <div class="module-text">
+                        <span class="module-title">
+                            <a href="https://github.com/czyzby/ktx/tree/master/inject">ktx-inject</a>
+                        </span>
+                    <span class="glyphicon icon-orange glyphicon-minus" aria-hidden="true"></span>
+                    Lightweight, simplistic dependency injection without reflection.
+                </div>
+            </div>
+            <div class="module-paragraph col-sm-4 col-xs-6">
+                <div class="image-border">
+                    <a class="module-link" data-module="ktx-log" href="#dependencies-section">
+                        <img alt="" class="module-icon" src="img/modules/log-icon.svg">
+                    </a>
+                </div>
+                <div class="module-text">
+                        <span class="module-title">
+                            <a href="https://github.com/czyzby/ktx/tree/master/log">ktx-log</a>
+                        </span>
+                    <span class="glyphicon icon-orange glyphicon-minus" aria-hidden="true"></span>
+                    Reduced runtime overhead <a href="https://github.com/libgdx/libgdx/wiki/Logging">logging</a>.
+                </div>
+            </div>
+            <div class="module-paragraph col-sm-4 col-xs-6">
+                <div class="image-border">
+                    <a class="module-link" data-module="ktx-math" href="#dependencies-section">
+                        <img alt="" class="module-icon" src="img/modules/math-icon.svg">
+                    </a>
+                </div>
+                <div class="module-text">
+                        <span class="module-title">
+                            <a href="https://github.com/czyzby/ktx/tree/master/math">ktx-math</a>
+                        </span>
+                    <span class="glyphicon icon-orange glyphicon-minus" aria-hidden="true"></span>
+                    <a href="https://github.com/libgdx/libgdx/wiki/Math-utilities">Math</a> extensions and operator
+                    overloads.
+                </div>
+            </div>
+            <div class="module-paragraph col-sm-4 col-xs-6">
+                <div class="image-border">
+                    <a class="module-link" data-module="ktx-scene2d" href="#dependencies-section">
+                        <img alt="" class="module-icon" src="img/modules/scene2d-icon.svg">
+                    </a>
+                </div>
+                <div class="module-text">
+                        <span class="module-title">
+                            <a href="https://github.com/czyzby/ktx/tree/master/scene2d">ktx-scene2d</a>
+                        </span>
+                    <span class="glyphicon icon-orange glyphicon-minus" aria-hidden="true"></span>
+                    Type-safe <a href="https://github.com/libgdx/libgdx/wiki/Scene2d">Scene2D</a> widget builders.
+                </div>
+            </div>
+            <div class="module-paragraph col-sm-4 col-xs-6">
+                <div class="image-border">
+                    <a class="module-link" data-module="ktx-style" href="#dependencies-section">
+                        <img alt="" class="module-icon" src="img/modules/style-icon.svg">
+                    </a>
+                </div>
+                <div class="module-text">
+                        <span class="module-title">
+                            <a href="https://github.com/czyzby/ktx/tree/master/style">ktx-style</a>
+                        </span>
+                    <span class="glyphicon icon-orange glyphicon-minus" aria-hidden="true"></span>
+                    Type-safe Scene2D <a href="https://github.com/libgdx/libgdx/wiki/Skin">styles</a> builders.
+                </div>
+            </div>
+            <div class="module-paragraph col-sm-4 col-xs-6">
+                <div class="image-border">
+                    <a class="module-link" data-module="ktx-vis" href="#dependencies-section">
+                        <img alt="" class="module-icon" src="img/modules/vis-icon.svg">
+                    </a>
+                </div>
+                <div class="module-text">
+                        <span class="module-title">
+                            <a href="https://github.com/czyzby/ktx/tree/master/vis">ktx-vis</a>
+                        </span>
+                    <span class="glyphicon icon-orange glyphicon-minus" aria-hidden="true"></span>
+                    Type-safe <a href="https://github.com/kotcrab/vis-editor/wiki/VisUI">VisUI</a> widget builders.
+                </div>
+            </div>
+            <div class="module-paragraph col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">
+                <div class="image-border">
+                    <a class="module-link" data-module="ktx-vis-style" href="#dependencies-section">
+                        <img alt="" class="module-icon" src="img/modules/vis-style-icon.svg">
+                    </a>
+                </div>
+                <div class="module-text">
+                        <span class="module-title">
+                            <a href="https://github.com/czyzby/ktx/tree/master/vis-style">ktx-vis-style</a>
+                        </span>
+                    <span class="glyphicon icon-orange glyphicon-minus" aria-hidden="true"></span>
+                    Type-safe <a href="https://github.com/kotcrab/vis-editor/wiki/VisUI">VisUI</a> styles builders.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="dependencies-section" class="container-fluid">
+    <div class="dependencies-container col-md-8 col-md-offset-2 col-sm-12">
+        <h3 class="headline">
+            Try <strong>KTX</strong>
+        </h3>
+        <div class="dependencies-prompt">
+            All <strong>KTX</strong> libraries are available through
+            <a href="https://search.maven.org/#search%7Cga%7C1%7Cktx">Maven Central</a>.
+        </div>
+        <ul class="nav nav-tabs">
+            <li id="dependency-gradle" class="active"><a>Gradle</a></li>
+            <li id="dependency-maven"><a>Maven</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">Module<span class="caret"></span></a>
+                <ul id="module-select" class="dropdown-menu">
+                    <li><a>ktx-actors</a></li>
+                    <li><a>ktx-app</a></li>
+                    <li><a>ktx-assets</a></li>
+                    <li><a>ktx-async</a></li>
+                    <li><a>ktx-collections</a></li>
+                    <li><a>ktx-inject</a></li>
+                    <li><a>ktx-log</a></li>
+                    <li><a>ktx-math</a></li>
+                    <li><a>ktx-scene2d</a></li>
+                    <li><a>ktx-style</a></li>
+                    <li><a>ktx-vis</a></li>
+                    <li><a>ktx-vis-style</a></li>
+                </ul>
+            </li>
+        </ul>
+        <code id="dependency-code" class="dependency-code col-xs-12"></code>
+        <div class="dependencies-links">
+            <a href="https://github.com/czyzby/ktx">Sources</a>
+            <span class="glyphicon icon-blue glyphicon-minus" aria-hidden="true"></span>
+            <a href="https://github.com/czyzby/ktx/releases">Releases</a>
+            <span class="glyphicon icon-blue glyphicon-minus" aria-hidden="true"></span>
+            <a href="https://github.com/czyzby/ktx/issues">Issues</a>
+        </div>
+    </div>
+</section>
+
+<section id="showcase-section" class="container-fluid">
+    <div class="showcase-container col-md-8 col-md-offset-2 col-sm-12">
+        <h3 class="headline">
+            Made with <strong>KTX</strong>
+        </h3>
+        <div class="row">
+            <div class="showcase-entry col-sm-6 col-xs-12">
+                <img class="showcase-img img-circle" src="img/showcase/tetrocrate.png" alt="">
+                <h2>TetroCrate</h2>
+                <span>
+                    <a href="https://play.google.com/store/apps/details?id=com.beyondinfinity.tetrocrate">Google Play</a>
+                    <span class="glyphicon icon-blue glyphicon-minus" aria-hidden="true"></span>
+                    <a href="https://itunes.apple.com/app/id1113468049">App Store</a>
+                    <span class="glyphicon icon-blue glyphicon-minus" aria-hidden="true"></span>
+                    <a href="https://facebook.com/tetrocrate">Facebook</a>
+                </span>
+                <div>
+                    Addictive 3D puzzle game inspired by the classic tangram puzzles.
+                </div>
+            </div>
+            <div class="showcase-entry col-sm-6 col-xs-12">
+                <img class="showcase-img img-circle" src="img/showcase/neighbourhood-watch.png" alt="">
+                <h2>Neighbourhood Watch</h2>
+                <span>
+                    <a href="https://github.com/czyzby/egu-2016/releases">Desktop</a>
+                    <span class="glyphicon icon-blue glyphicon-minus" aria-hidden="true"></span>
+                    <a href="https://github.com/czyzby/egu-2016">Sources</a>
+                </span>
+                <div>
+                    Made in under 30 hours on East Games United game jam. Clear the neighbourhood out of filthy
+                    wrongdoers!
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="showcase-entry col-sm-6 col-xs-12">
+                <img class="showcase-img img-circle" src="img/showcase/herring-io.png" alt="">
+                <h2>Herring.io</h2>
+                <span>
+                    <a href="https://github.com/czyzby/egu2016/releases">Desktop</a>
+                    <span class="glyphicon icon-blue glyphicon-minus" aria-hidden="true"></span>
+                    <a href="https://github.com/czyzby/egu2016">Sources</a>
+                </span>
+                <div>
+                    Made in under 30 hours on East Games United game jam. Eat smaller fish, grow bigger, repeat.
+                </div>
+            </div>
+            <div class="showcase-entry col-sm-6 col-xs-12">
+                <img class="showcase-img img-circle" src="img/showcase/ore-infinium.png" alt="">
+                <h2>Ore Infinium</h2>
+                <span>
+                    <a href="https://github.com/sreich/ore-infinium/releases">Desktop</a>
+                    <span class="glyphicon icon-blue glyphicon-minus" aria-hidden="true"></span>
+                    <a href="https://github.com/sreich/ore-infinium">Sources</a>
+                    <span class="glyphicon icon-blue glyphicon-minus" aria-hidden="true"></span>
+                    <a href="https://www.reddit.com/r/oreinfinium/">Reddit</a>
+                </span>
+                <div>
+                    Open source multi-player Terraria-inspired sci-fi game in early development.
+                </div>
+            </div>
+        </div>
+        <h6 class="contact-prompt">
+            Missing your game? <a href="https://github.com/libktx/libktx.github.io/issues">Let us know!</a>
+        </h6>
+    </div>
+</section>
+
+<footer class="footer-container container-fluid">
+    <div class="col-md-4 col-md-offset-2 col-sm-6 col-xs-12">
+        <a class="scroll-top" href="#">
+            <img class="logo-tiny" src="img/ktx-logo.svg">
+        </a>
+    </div>
+    <div class="footer-links col-md-4 col-sm-6 ">
+        <a href="https://github.com/czyzby/ktx">GitHub</a>
+        <span class="glyphicon icon-orange glyphicon-minus" aria-hidden="true"></span>
+        <a href="https://github.com/czyzby/ktx/issues">Issues</a>
+        <span class="glyphicon icon-orange glyphicon-minus" aria-hidden="true"></span>
+        <a href="https://github.com/czyzby/ktx/releases">Releases</a>
+        <span class="glyphicon icon-orange glyphicon-minus" aria-hidden="true"></span>
+        <a href="https://github.com/libktx/libktx.github.io">Website</a>
+        <span class="glyphicon icon-orange glyphicon-minus" aria-hidden="true"></span>
+        <a href="https://github.com/czyzby">MJ</a> <strong>2017</strong>
+    </div>
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

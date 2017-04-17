@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="200"
+   height="200"
+   viewBox="0 0 200 200"
+   id="svg3336"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="multi-platform-icon.svg">
+  <title
+     id="title4281">KTX</title>
+  <defs
+     id="defs3338">
+    <linearGradient
+       id="linearGradient4153"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#0000ff;stop-opacity:1;"
+         offset="0"
+         id="stop4155" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2"
+     inkscape:cx="-23.74054"
+     inkscape:cy="92.144258"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1366"
+     inkscape:window-height="714"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     units="px" />
+  <metadata
+     id="metadata3341">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>KTX</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>MJ</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:description>KTX logo, 2017.</dc:description>
+        <dc:date>06-04-2017</dc:date>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title>MJ (@czyzby)</dc:title>
+          </cc:Agent>
+        </dc:contributor>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Unlicense</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>KTX</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:identifier />
+        <cc:license
+           rdf:resource="https://unlicense.org/" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-852.3622)">
+    <g
+       transform="matrix(0.37492423,0,0,0.39836934,10,856.73404)"
+       id="g3"
+       style="fill:#168ed8;fill-opacity:1">
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#168ed8;fill-opacity:1"
+         d="m 206.759,332.99 -167.534,0 c -3.894,0 -7.065,-3.173 -7.065,-7.067 l 0,-272.57 c 0,-3.893 3.172,-7.065 7.065,-7.065 l 401.631,0 c 3.895,0 7.065,3.172 7.065,7.065 l 0,59.696 c 11.763,1.389 22.785,5.244 32.159,11.581 l 0,-71.277 c 0,-21.63 -17.602,-39.225 -39.225,-39.225 l -401.63,0 C 17.602,14.128 0,31.722 0,53.353 l 0,272.569 c 0,21.631 17.602,39.227 39.225,39.227 l 134.62,0 0,52.581 -21.229,0 c -13.316,0 -24.12,10.796 -24.12,24.12 0,13.324 10.804,24.12 24.12,24.12 l 67.71,0 C 211.863,454.068 206.76,439.62 206.76,423.933 l 0,-90.943 z"
+         id="path5" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#168ed8;fill-opacity:1"
+         d="m 341.739,441.645 0,-34.742 -70.662,0 0,-221.904 c 0,-4.681 3.8,-8.489 8.479,-8.489 l 159.887,0 c 4.679,0 8.478,3.808 8.478,8.489 l 0,68.676 12.046,0 c 7.364,0 14.179,2.127 20.113,5.597 l 0,-74.273 c 0,-22.417 -18.23,-40.648 -40.638,-40.648 l -159.886,0 c -22.407,0 -40.638,18.231 -40.638,40.648 l 0,238.933 c 0,22.417 18.23,40.647 40.638,40.647 l 69.438,0 c -4.428,-6.359 -7.255,-15.22 -7.255,-22.934 z"
+         id="path7" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#168ed8;fill-opacity:1"
+         d="m 459.967,273.775 -77.996,0 c -11.104,0 -20.132,9.037 -20.132,20.138 l 0,147.732 c 0,11.101 9.028,20.131 20.132,20.131 l 77.996,0 c 11.102,0 20.13,-9.03 20.13,-20.131 l 0,-147.733 c 0,-11.101 -9.029,-20.137 -20.13,-20.137 z m -74.009,24.119 70.019,0 0,127.703 -70.019,0 0,-127.703 z m 35.019,154.099 c -2.215,0 -4.193,-0.896 -5.7,-2.277 -1.713,-1.555 -2.812,-3.739 -2.812,-6.228 0,-4.694 3.801,-8.495 8.512,-8.495 4.679,0 8.479,3.801 8.479,8.495 0,2.489 -1.1,4.672 -2.795,6.228 -1.509,1.382 -3.487,2.277 -5.684,2.277 z"
+         id="path9" />
+    </g>
+  </g>
+</svg>
