@@ -158,12 +158,8 @@ a:hover {
 }
 
 .dependency-code {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
     color: #525252;
-    background-color: #e1e1e1;
-    white-space: pre-wrap;
-    margin-bottom: 1rem;
+    background-color: #f6f6f6;
 }
 
 #dependencies-section .dependencies-links {

@@ -1,8 +1,9 @@
 // WARNING: Made by a backend developer. Read at your own risk.
 
 $(document).ready(function () {
+    // Code highlight:
     var currentModule = 'ktx-actors';
-    var dependencySchema = getGradleDependency;
+    var dependencySchema;
 
     function getGradleDependency(module) {
         return "// " + module + ":\n" +
@@ -24,30 +25,44 @@ $(document).ready(function () {
     });
 
     $('.module-link').click(function () {
-        currentModule = $(this).data('module')
+        currentModule = $(this).data('module');
         refreshDependencyDeclaration();
     });
 
     $('#dependency-gradle').click(function () {
-        dependencySchema = getGradleDependency;
+        setGradleDependencySchema();
         $(this).addClass('active');
         $('#dependency-maven').removeClass('active');
         refreshDependencyDeclaration();
     });
 
     $('#dependency-maven').click(function () {
-        dependencySchema = getMavenDependency;
+        setMavenDependencySchema();
         $(this).addClass('active');
         $('#dependency-gradle').removeClass('active');
         refreshDependencyDeclaration();
     });
 
-    function refreshDependencyDeclaration() {
-        $('#dependency-code').text(dependencySchema(currentModule));
+    function setGradleDependencySchema() {
+        dependencySchema = getGradleDependency;
+        $('#dependency-code').removeClass('xml').addClass('groovy');
     }
 
+    function setMavenDependencySchema() {
+        dependencySchema = getMavenDependency;
+        $('#dependency-code').removeClass('groovy').addClass('xml');
+    }
+
+    function refreshDependencyDeclaration() {
+        var codeElement = $('#dependency-code');
+        codeElement.text(dependencySchema(currentModule));
+        hljs.highlightBlock(codeElement[0]);
+    }
+
+    setGradleDependencySchema();
     refreshDependencyDeclaration();
 
+    // Smooth scrolling:
     $(".navbar a, footer a, .module-link").click(function (event) {
         if (this.hash !== '') {
             event.preventDefault();
@@ -64,4 +79,4 @@ $(document).ready(function () {
     $(".scroll-top").click(function () {
         $("html, body").animate({scrollTop: 0}, 900);
     })
-})
+});
