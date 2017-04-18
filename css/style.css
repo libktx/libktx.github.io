@@ -138,6 +138,11 @@ a:hover {
     font-size: 1.2rem;
 }
 
+#dependencies-section pre {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
 #dependencies-section .dependencies-prompt {
     text-align: center;
 }
@@ -149,17 +154,13 @@ a:hover {
 }
 
 #dependencies-section li.active > a {
-    color: #525252;
+    color: #168ed8;
     font-weight: bold;
+    background-color: #e1e1e1;
 }
 
 #module-select li > a {
     color: #525252;
-}
-
-.dependency-code {
-    color: #525252;
-    background-color: #f6f6f6;
 }
 
 #dependencies-section .dependencies-links {
