@@ -1,10 +1,34 @@
 html {
-    font-size: 100%;
+    font-size: 16px;
 }
 
 body {
     background-color: #e1e1e1;
     color: #525252;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+h5 {
+    font-size: 0.9rem;
+}
+
+h6 {
+    font-size: 0.8rem;
 }
 
 #about-section {
@@ -203,7 +227,20 @@ a:hover {
     font-weight: normal;
 }
 
-@media (min-width: 0rem) {
+
+@media (min-resolution: 200dpi) {
+    body {
+        font-size: 18px;
+    }
+}
+
+@media (min-resolution: 300dpi) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 0px) {
     .logo {
         width: 15rem;
     }
