@@ -227,19 +227,6 @@ a:hover {
     font-weight: normal;
 }
 
-
-@media (min-resolution: 200dpi) {
-    body {
-        font-size: 18px;
-    }
-}
-
-@media (min-resolution: 300dpi) {
-    body {
-        font-size: 14px;
-    }
-}
-
 @media (min-width: 0px) {
     .logo {
         width: 15rem;
@@ -254,6 +241,10 @@ a:hover {
     }
 
     .footer-links {
+        display: none;
+    }
+
+    .dependencies-code-container {
         display: none;
     }
 }
@@ -273,6 +264,10 @@ a:hover {
 
     .footer-links {
         display: none;
+    }
+
+    .dependencies-code-container {
+        display: block;
     }
 }
 
