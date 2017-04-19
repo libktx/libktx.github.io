@@ -66,22 +66,13 @@ h6 {
 #about-section .image-border {
     background-color: #e1e1e1;
     border-radius: 50%;
-    width: 7rem;
-    height: 7rem;
     float: left;
-    margin-right: 1rem;
     margin-top: 0.5rem;
-    margin-bottom: 1.25rem;
-}
-
-#about-section .image-border .about-icon {
-    width: 7rem;
-    height: 7rem;
-    padding: 2rem;
 }
 
 #about-section .about-paragraph {
     padding: 1rem;
+    display: flex;
 }
 
 #about-section .about-paragraph .about-text {
@@ -232,6 +223,23 @@ a:hover {
         width: 15rem;
     }
 
+    #about-section .image-border {
+        width: 5rem;
+        height: 5rem;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    #about-section .image-border .about-icon {
+        width: 5rem;
+        height: 5rem;
+        padding: 1rem;
+    }
+
+    .dependencies-code-container {
+        display: none;
+    }
+
     .showcase-img {
         width: 10rem;
     }
@@ -243,15 +251,15 @@ a:hover {
     .footer-links {
         display: none;
     }
-
-    .dependencies-code-container {
-        display: none;
-    }
 }
 
 @media (min-width: 30rem) {
     .logo {
         width: 25rem;
+    }
+
+    .dependencies-code-container {
+        display: block;
     }
 
     .showcase-img {
@@ -265,15 +273,24 @@ a:hover {
     .footer-links {
         display: none;
     }
-
-    .dependencies-code-container {
-        display: block;
-    }
 }
 
 @media (min-width: 48rem) {
     .logo {
         width: 40rem;
+    }
+
+    #about-section .image-border {
+        width: 6rem;
+        height: 6rem;
+        margin-right: 0.5rem;
+        margin-bottom: 1.25rem;
+    }
+
+    #about-section .image-border .about-icon {
+        width: 6rem;
+        height: 6rem;
+        padding: 1.5rem;
     }
 
     .showcase-img {
@@ -292,6 +309,19 @@ a:hover {
 @media (min-width: 64rem) {
     .logo {
         width: 50rem;
+    }
+
+    #about-section .image-border {
+        width: 7rem;
+        height: 7rem;
+        margin-right: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #about-section .image-border .about-icon {
+        width: 7rem;
+        height: 7rem;
+        padding: 2rem;
     }
 
     .footer-container {
