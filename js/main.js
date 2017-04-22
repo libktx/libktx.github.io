@@ -1,19 +1,19 @@
 // WARNING: Made by a backend developer. Read at your own risk.
 
 $(document).ready(function () {
-    // Code highlight:
+    // Gradle/Maven dependencies:
     var currentModule = 'ktx-actors';
     var dependencySchema;
 
     function getGradleDependency(module) {
         return "// " + module + ":\n" +
-            "compile group: 'com.github.czyzby', name: '" + module + "', version: ktxVersion";
+            "compile group: 'io.github.libktx', name: '" + module + "', version: ktxVersion";
     }
 
     function getMavenDependency(module) {
         return "<!-- " + module + " -->\n" +
             "<dependency>\n" +
-            "    <groupId>com.github.czyzby</groupId>\n" +
+            "    <groupId>io.github.libktx</groupId>\n" +
             "    <artifactId>" + module + "</artifactId>\n" +
             "    <version>${ktx.version}</version>\n" +
             "</dependency>";
