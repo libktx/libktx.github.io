@@ -2,12 +2,14 @@
 
 $(document).ready(function () {
     // Gradle/Maven dependencies:
+    var mavenLibraryVersion = '${ktx.version}';
+    var gradleLibraryVersion = 'ktxVersion';
     var currentModule = 'ktx-actors';
     var dependencySchema;
 
     function getGradleDependency(module) {
         return "// " + module + ":\n" +
-            "compile group: 'io.github.libktx', name: '" + module + "', version: ktxVersion";
+            "compile group: 'io.github.libktx', name: '" + module + "', version: " + gradleLibraryVersion;
     }
 
     function getMavenDependency(module) {
@@ -15,7 +17,7 @@ $(document).ready(function () {
             "<dependency>\n" +
             "    <groupId>io.github.libktx</groupId>\n" +
             "    <artifactId>" + module + "</artifactId>\n" +
-            "    <version>${ktx.version}</version>\n" +
+            "    <version>" + mavenLibraryVersion + "</version>\n" +
             "</dependency>";
     }
 
@@ -61,6 +63,25 @@ $(document).ready(function () {
 
     setGradleDependencySchema();
     refreshDependencyDeclaration();
+
+    // Fetching latest library version from the repository:
+    $.ajax({
+        type: 'GET',
+        url: 'https://api.github.com/repos/libktx/ktx/contents/version.txt?ref=master',
+        dataType: 'jsonp',
+        async: true,
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Access-Control-Allow-Headers', 'x-requested-with');
+        },
+        success: function (response) {
+            var version = $.base64.decode(response.data.content.trim()).trim();
+            if (/^\d+\.\d+\.\d+(-b\d+)?$/.test(version)) {
+                mavenLibraryVersion = version;
+                gradleLibraryVersion = "'" + version + "'";
+                refreshDependencyDeclaration();
+            }
+        }
+    });
 
     // Smooth scrolling:
     $(".navbar a, footer a, .module-link").click(function (event) {
