@@ -42,6 +42,18 @@ h6 {
     padding-bottom: 1.5rem;
 }
 
+.logo-background-right {
+    float: right;
+    clear: right;
+    padding: 0rem;
+    z-index: -1;
+}
+
+.logo-background-left {
+    padding: 0rem;
+    z-index: -1;
+}
+
 .logo-tiny {
     width: 4rem;
 }
@@ -223,6 +235,18 @@ a:hover {
         width: 15rem;
     }
 
+    .logo-background-right {
+        width: 12rem;
+        height: 12rem;
+        margin-bottom: -12rem;
+    }
+
+    .logo-background-left {
+        width: 12rem;
+        height: 12rem;
+        margin-top: -12rem;
+    }
+
     #about-section .image-border {
         width: 5rem;
         height: 5rem;
@@ -280,6 +304,18 @@ a:hover {
         width: 40rem;
     }
 
+    .logo-background-right {
+        width: 16rem;
+        height: 16rem;
+        margin-bottom: -16rem;
+    }
+
+    .logo-background-left {
+        width: 16rem;
+        height: 16rem;
+        margin-top: -16rem;
+    }
+
     #about-section .image-border {
         width: 6rem;
         height: 6rem;
@@ -311,6 +347,18 @@ a:hover {
         width: 50rem;
     }
 
+    .logo-background-right {
+        width: 20rem;
+        height: 20rem;
+        margin-bottom: -20rem;
+    }
+
+    .logo-background-left {
+        width: 20rem;
+        height: 20rem;
+        margin-top: -20rem;
+    }
+
     #about-section .image-border {
         width: 7rem;
         height: 7rem;
@@ -333,3 +381,17 @@ a:hover {
     }
 }
 
+
+@media (min-width: 96rem) {
+    .logo-background-right {
+        width: 40rem;
+        height: 40rem;
+        margin-bottom: -40rem;
+    }
+
+    .logo-background-left {
+        width: 40rem;
+        height: 40rem;
+        margin-top: -40rem;
+    }
+}
