@@ -123,6 +123,10 @@ a:hover {
     padding: 1rem;
 }
 
+.module-paragraph {
+    padding-top: 1rem;
+}
+
 .flex-row{
     display: flex;
     flex-wrap: wrap;
