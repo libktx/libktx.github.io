@@ -4,12 +4,18 @@ $(document).ready(function () {
     // Gradle/Maven dependencies:
     var mavenLibraryVersion = '${ktx.version}';
     var gradleLibraryVersion = 'ktxVersion';
+    var gradleKotlinLibraryVersion = 'ktxVersion';
     var currentModule = 'ktx-actors';
     var dependencySchema;
 
     function getGradleDependency(module) {
         return "// " + module + ":\n" +
-            "compile group: 'io.github.libktx', name: '" + module + "', version: " + gradleLibraryVersion;
+            "api group: 'io.github.libktx', name: '" + module + "', version: " + gradleLibraryVersion;
+    }
+
+    function getGradleKotlinDependency(module) {
+        return "// " + module + ":\n" +
+            'api(group = "io.github.libktx", name = "' + module + '", version = ' + gradleKotlinLibraryVersion + ')';
     }
 
     function getMavenDependency(module) {
@@ -35,6 +41,15 @@ $(document).ready(function () {
         setGradleDependencySchema();
         $(this).addClass('active');
         $('#dependency-maven').removeClass('active');
+        $('#dependency-gradle-kotlin').removeClass('active');
+        refreshDependencyDeclaration();
+    });
+
+    $('#dependency-gradle-kotlin').click(function () {
+        setGradleKotlinDependencySchema();
+        $(this).addClass('active');
+        $('#dependency-maven').removeClass('active');
+        $('#dependency-gradle').removeClass('active');
         refreshDependencyDeclaration();
     });
 
@@ -42,17 +57,23 @@ $(document).ready(function () {
         setMavenDependencySchema();
         $(this).addClass('active');
         $('#dependency-gradle').removeClass('active');
+        $('#dependency-gradle-kotlin').removeClass('active');
         refreshDependencyDeclaration();
     });
 
     function setGradleDependencySchema() {
         dependencySchema = getGradleDependency;
-        $('#dependency-code').removeClass('xml').addClass('groovy');
+        $('#dependency-code').removeClass('xml').removeClass('kotlin').addClass('groovy');
+    }
+
+    function setGradleKotlinDependencySchema() {
+        dependencySchema = getGradleKotlinDependency;
+        $('#dependency-code').removeClass('xml').removeClass('groovy').addClass('kotlin');
     }
 
     function setMavenDependencySchema() {
         dependencySchema = getMavenDependency;
-        $('#dependency-code').removeClass('groovy').addClass('xml');
+        $('#dependency-code').removeClass('groovy').removeClass('kotlin').addClass('xml');
     }
 
     function refreshDependencyDeclaration() {
@@ -78,6 +99,7 @@ $(document).ready(function () {
             if (/^\d+\.\d+\.\d+(-b\d+)?$/.test(version)) {
                 mavenLibraryVersion = version;
                 gradleLibraryVersion = "'" + version + "'";
+                gradleKotlinLibraryVersion = '"' + version + '"';
                 refreshDependencyDeclaration();
             }
         }
