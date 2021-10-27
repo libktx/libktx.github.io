@@ -31,6 +31,13 @@ h6 {
     font-size: 0.8rem;
 }
 
+.github-link {
+    margin-left: 12px;
+    margin-right: 5px;
+    margin-bottom: 6px;
+    margin-top: 15px;
+}
+
 #about-section {
     background-color: #f6f6f6;
 }
@@ -174,6 +181,10 @@ a:hover {
     border-bottom-right-radius: 4px;
 }
 
+.dependencies-code-container {
+    padding: 1rem;
+}
+
 #dependencies-section .dependencies-prompt {
     text-align: center;
 }
@@ -196,6 +207,7 @@ a:hover {
 
 #dependencies-section .dependencies-links {
     text-align: center;
+    margin-top: 1rem;
     margin-bottom: 2rem;
 }
 
