@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-color: #e1e1e1;
+    background-color: #f0efef;
     color: #525252;
 }
 
@@ -75,7 +75,7 @@ h6 {
 }
 
 #about-section .headline .kotlin-link {
-    color: #f88909;
+    color: #d17000;
 }
 
 #about-section .headline .libgdx-link {
