@@ -96,7 +96,7 @@ $(document).ready(function () {
         },
         success: function (response) {
             var version = $.base64.decode(response.data.content.trim()).trim();
-            if (/^\d+\.\d+\.\d+(-b\d+)?$/.test(version)) {
+            if (/^\d+\.\d+\.\d+(-rc\d+)?$/.test(version)) {
                 mavenLibraryVersion = version;
                 gradleLibraryVersion = "'" + version + "'";
                 gradleKotlinLibraryVersion = '"' + version + '"';
